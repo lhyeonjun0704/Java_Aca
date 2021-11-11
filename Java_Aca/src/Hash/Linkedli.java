@@ -24,7 +24,6 @@ public class Linkedli {
 		System.out.println(q1.size());
 		if(!q1.isEmpty()) q1.poll();
 		System.out.println(q1);
-		
 		Stack<String> st1 = new Stack<String>();
 		st1.push("Ä«·¹");
 		st1.push("ººÀ½¹ä");
