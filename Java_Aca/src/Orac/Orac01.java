@@ -31,6 +31,13 @@ package Orac;
 
 // db : raw data x
 
+// sql언어
+// query문 : select (CRUD), 삽입, 검색, 수정, 삭제
+// dml(data mainpulation language) 데이터 조작(작동) 언어 insert, delete, update(crud의 c d u)
+// ddl(data definition language) create, ...
+
+// create table name( ~~~);
+
 public class Orac01 {
 
 	public static void main(String[] args) {
