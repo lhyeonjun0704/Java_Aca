@@ -50,6 +50,7 @@ select department_id, avg(salary) from employees group by department_id order by
 
 select department_id, first_name, avg(salary) from employees group by department_id, first_name order by 1;
 
+<<<<<<< HEAD
 select department_id 부서아이디, manager_id 매니저아이디, avg(salary) 평균급여 
 from employees 
 group by department_id, manager_id;
@@ -125,4 +126,9 @@ select substr(hire_date, 1, 2) from employees;
 
 select first_name 사원명, salary 급여, department_name 부서명
 from employees, departments;
+=======
+
+
+
+>>>>>>> 7b02ad07e221d94ae65417bb6b9ced4e976bf1f6
 
