@@ -1,56 +1,120 @@
--- translate / replace
-select first_name, email from employees where translate(email, '0123456789', 'PPPPPPPPPP')<> email;
+-- sqldeveloper에서 erd 추출
+-- 메뉴 보기 -> data modeler - 브라우저
+-- 좌측아래의 브라우저 창에서 맨앞 + 기호클릭한 후 나타나는 "관계형모델[1]" - 마오- 새관계형 모델
+-- 화면 우측 relational... 7HR 테이블 드래그 하되 테이블 앞의 그림을 드래그하여 우측 relational..탭창으로
+-- 간단하게 보기위해 relational.. 탭창에서 - 빈공간 -마오 -하여 세부정보보기에서 열만 남기고 체크표시 해제
+-- 이미지나 pdf로 결과 저장위해 relational... 탭창에서 -마오 한 후 "다이어그램인쇄"에서 선택하여 저장.
 
--- 반올림 round
-select round(36.754, -1) from dual;
+-- join
+select e.first_name 이름, e.salary 급여, e.department_id 부서아이디, d.department_name 부서명
+from employees e, departments d
+where e.department_id = d.department_id;
 
--- 절삭
-select trunc(26.754, 1) from dual;
+-- Q) 직원의 이름, 매니저아이디, 지역아이디를 출력하시오
+select e.first_name 이름,  e.manager_id 매니저아이디, d.location_id 지역아이디
+from employees e, departments d
+where e.department_id = d.department_id
+order by e.first_name;
 
--- 만난지 100일
-select sysdate, sysdate+100-1 "만나지 100일" from dual;
+-- 직원의 이름, 매니저아이디, 지역아이디를 출력하시오
+select e.first_name 이름, e.manager_id 매니저아이디, d.location_id 지역아이디
+from employees e, departments d
+where e.department_id = d.department_id and e.manager_id > 120
+order by e.first_name;
 
--- date 반올림(반올림은 16일부터)
-select round(sysdate, 'mon') from dual;
-select round(to_date('211116'), 'mon') from dual;
-select round(to_date('2021 11 16', 'yyyy mm dd'), 'mon') from dual;
-select round(sysdate, 'year') from dual;
-select sysdate, add_months(sysdate, 6) from dual;
+-- 사원들의 이름과 직책(job_title)을 조회 출력
+select e.first_name 직원명, j.job_title 직책
+from employees e, jobs j
+where e.job_id = j.job_id;
 
--- months_between() 인자 순서는(최신날짜, 오래된 날짜)
+select * from employees;
+select * from locations;
+select * from departments;
+select * from tab;
 
-select first_name, months_between(sysdate, hire_date) from employees;
-select first_name, trunc(months_between(sysdate, hire_date)) from employees;
-select first_name, hire_date, salary, round(months_between(sysdate, hire_date)/12) from employees where round(months_between(sysdate, hire_date)/12) >= 15;
+-- 직원의 이름, 부서명, 해당 city를 출력하시오
+select e.first_name 직원명, d.department_id 부서명, l.city 도시
+from employees e, locations l, departments d
+where e.department_id = d.department_id and d.location_id = l.location_id
+order by l.city asc;
 
--- to_char() to_date()
+select * from employees;
+select * from locations;
+select * from departments;
+-- 도시별 직원수 출력( 출력은 도시명, 직원수)
+select l.city 도시명, count(l.city)
+from locations l, departments d, employees e
+where l.location_id = d.location_id and d.department_id = e.department_id
+group by l.city;
 
-select to_date(sysdate) from dual;
+select * from locations;
+select * from departments;
+-- 부서이름과 부서가 속한 도시명(city)을 조회 출력.
+select d.department_name 부서명, l.city 도시명
+from departments d, locations l
+where d.location_id = l.location_id;
 
-select to_char(sysdate, 'yyyy/mm/dd') from dual;
+select * from countries;
+select * from employees;
+-- 사원의 이름과 해당 사원이 근무하는 국가명 조회 출력.
+select e.first_name 이름, c.country_name 근무국가명
+from employees e, departments d, locations l, countries c
+where e.department_id = d.department_id and d.location_id = l.location_id and l.country_id = c.country_id;
 
-select first_name, hire_date from employees where to_char(hire_date, 'RR') = '05';
+-- 직책(job_title)이 'representative'인 사람 이름 직책, 부서 조회 출력
+select e.first_name 이름, j.job_title 직책, d.department_name
+from employees e, jobs j, departments d
+where d.department_id = e.department_id and e.job_id = j.job_id and lower(j.job_title) like '%representative%';
 
--- 단일행함수(single row function)
-select first_name from employees where length(first_name) = 5;
+select job_title from jobs;
 
-select avg(commission_pct) from employees;
+-- 직책(job_title)이 'clerk'인 사람 이름 직책, 부서명 조회
 
-select sum(commission_pct) from employees;
+-- 각 도시에 속한 부서명 별로 2007년 이전에 입사한 직원들의 인원수 출력( 단, 같은 도시일 경우 직원수가 많은 순으로 출력 도시명-부서명-인원수)
+select c.country_name 도시명, d.department_name 부서명, count(c.country_name)
+from employees e, departments d, countries c, locations l
+where substr(e.hire_date, 1, 2) = '07'and d.location_id = l.location_id and l.country_id = c.country_id and e.department_id = d.department_id
+group by d.department_name, c.country_name
+order by c.country_name asc, count(c.country_name) desc;
 
--- 급여의 합, 최소, 최대 급여 출력, 급여평균, 직원수, 매니저있는 직원수, 직원부서 수 구하기
-select sum(salary), min(salary), max(salary), round(avg(salary),1), count(*), count(manager_id), count(department_id) from employees;
-select sum(salary), min(salary), max(salary), round(avg(salary),1), count(*), count(manager_id), count(distinct department_id) from employees;
+select l.city 도시명, d.department_name 부서명, count(*) 인원수
+from employees e, departments d, locations l 
+where e.department_id = d.department_id and d.location_id = l.location_id and hire_date < '07/01/01'
+group by l.city, d.department_name
+order by l.city, count(*) desc;
 
--- 부서별 급여의 평균
-select department_id, avg(salary) from employees group by department_id order by 1;
+select e.first_name 이름, e.salary 급여, d.department_name 부서명
+from employees e, departments d
+where e.department_id = d.department_id(+);
 
--- 부서별 급여의 평균 구하시오
--- 공식 => group by 일 때 select 문에서 그룹함수를 제외한 나머지 칼럼 모드가 group by에 있으면 GOOD 그렇지 않으면 error
+select e.first_name 이름, e.salary 급여, d.department_name 부서명
+from employees e, departments d
+where e.department_id(+) = d.department_id;
 
-select department_id, first_name, avg(salary) from employees group by department_id, first_name order by 1;
+select e.first_name 이름, e.salary 급여, d.department_name 부서명
+from employees e left outer join departments d
+on(e.department_id = d.department_id);
+
+select e.first_name 이름, e.salary 급여, d.department_name 부서명
+from employees e right outer join departments d
+on(e.department_id = d.department_id);
+
+-- outer join 테이블 이거 ansi 1999으로 작성해야됨.
 
 
+select e.first_name 이름, e.salary 급여, d.department_name 부서명
+from employees e, departments d
+where e.department_id = d.department_id(+)
+union
+select e.first_name 이름, e.salary 급여, d.department_name 부서명
+from employees e, departments d
+where e.department_id(+) = d.department_id;
 
+select hire_date from employees;
 
-
+-- 2007년 입사한 직원들의 사번, 이름, 성(last_name), 입사일, 부서명을 출력
+-- 이 때, 부서에 배치되지 않은 직원의 경우, '그런부서없어'로 보여주고 정렬은 성(last_name)을 기준 출력
+select e.employee_id 사번, e.first_name 이름, e.last_name 성, e.hire_date 입사일, nvl2(d.department_name, d.department_name, '그런부서없어') 부서명
+from employees e, departments d
+where e.hire_date like '07%'and e.department_id = d.department_id(+)
+order by e.last_name;

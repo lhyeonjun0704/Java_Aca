@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A21B6CA0-F8F3-466C-C5C8-900AC990FA1E" schemaObject="19660489-048A-CEBD-7396-B7C36CC61C91" name="REGIONS">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REGIONS</sourceObjName>
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:24:15 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REGION_ID" id="91450F07-DB66-CE3D-1DC9-1E957BFDD400">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_ID</sourceObjName>
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:24:15 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>REGION_ID_NN</notNullConstraintName>
+</Column>
+<Column name="REGION_NAME" id="30368597-E4D9-1666-F396-A09FEE7759A8">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_NAME</sourceObjName>
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:24:15 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="84D62A63-392C-B7AA-D086-A9BDAA44EE50" name="REG_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:24:15 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91450F07-DB66-CE3D-1DC9-1E957BFDD400"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3DF0EDC8-5581-459B-B15A-1062FEBFB3AA" schemaObject="19660489-048A-CEBD-7396-B7C36CC61C91" name="REG_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:24:15 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91450F07-DB66-CE3D-1DC9-1E957BFDD400"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
