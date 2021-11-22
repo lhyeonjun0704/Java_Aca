@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="255285EF-2A11-B190-2D90-AE01F6404682" schemaObject="58090106-7D0D-551B-F884-4A723A8632E9" name="DEPARTMENTS">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>DEPARTMENTS</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Departments table that shows details of departments where employees
+work. Contains 27 rows; references with locations, employees, and job_history tables.]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DEPARTMENT_ID" id="B3EBAB62-8542-B92A-676C-516FBD955233">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key column of departments table.]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEPARTMENT_NAME" id="E5F11901-9C67-5612-F9C2-77E4E6A86DBB">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>DEPARTMENT_NAME</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column that shows name of a department. Administration,
+Marketing, Purchasing, Human Resources, Shipping, IT, Executive, Public
+Relations, Sales, Finance, and Accounting. ]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>DEPT_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="MANAGER_ID" id="79D5332C-48C0-CB45-1674-56919329B1C3">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>MANAGER_ID</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Manager_id of a department. Foreign key to employee_id column of employees table. The manager_id column of the employee table references this column.]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BD7C211F-0820-C5DC-D173-BC193CDDEC93" referredColumn="F82DB8EE-C26C-411A-4B71-D5979FDC4E33"/>
+</associations>
+</Column>
+<Column name="LOCATION_ID" id="A7058EA5-D677-70E2-C99E-242AEFD19C0D">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>LOCATION_ID</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Location id where a department is located. Foreign key to location_id column of locations table.]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="44889862-22A4-CBA0-B0B0-C22AE1FD563C" referredColumn="92E915BE-BDFC-EB96-D58A-4C3FA5A4E4EF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A977FBE7-AB4C-56BD-071A-DD49C3EB7EDB" name="DEPT_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>DEPT_ID_PK</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3EBAB62-8542-B92A-676C-516FBD955233"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5E6DD8E9-0B33-6357-0896-A321E55A6E82" schemaObject="58090106-7D0D-551B-F884-4A723A8632E9" name="DEPT_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>DEPT_ID_PK</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3EBAB62-8542-B92A-676C-516FBD955233"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B46D20E-50C2-83BC-1D0A-BD79CED8248E" schemaObject="58090106-7D0D-551B-F884-4A723A8632E9" name="DEPT_LOCATION_IX">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>DEPT_LOCATION_IX</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7058EA5-D677-70E2-C99E-242AEFD19C0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D30AD3E5-E4B3-6F2A-055D-89591BC88BBA" name="DEPT_LOC_FK">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7058EA5-D677-70E2-C99E-242AEFD19C0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="104E2037-68C8-9570-9037-51E1142D57AF" name="DEPT_MGR_FK">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79D5332C-48C0-CB45-1674-56919329B1C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
