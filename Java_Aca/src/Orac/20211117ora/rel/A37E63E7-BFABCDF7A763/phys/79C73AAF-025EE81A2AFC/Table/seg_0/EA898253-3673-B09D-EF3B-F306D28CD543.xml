@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DEPARTMENTS" directorySegmentName="seg_0" id="EA898253-3673-B09D-EF3B-F306D28CD543">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<schemaObject>19660489-048A-CEBD-7396-B7C36CC61C91</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9C783E7C-6E0C-68F9-EBFA-15C1B55FBF69</segment>
+<tableSpace>101B0D6D-AA77-5095-2ECC-17CAFFFAD281</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="LOCATION_ID" id="157D3B54-92B1-C6E4-D0B9-1E0A542D6039">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_ID" id="169CB39E-C451-52BF-2FEB-D5E8862EC61E">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MANAGER_ID" id="5C39CEB0-2AE9-514E-B2B5-11216527AB04">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_NAME" id="F12352B8-9516-B3F2-C2F3-50DFD92E0E86">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DEPT_LOCATION_IX" id="6A92A4E5-7116-0064-D46C-C916DE57E864">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<schemaObject>19660489-048A-CEBD-7396-B7C36CC61C91</schemaObject>
+<segment>2C9A36B4-1879-5EA9-80F4-C8FD8E39E2A1</segment>
+<tableSpace>101B0D6D-AA77-5095-2ECC-17CAFFFAD281</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DEPT_ID_PK" id="A2AE2837-5A3B-55CC-AD87-6807F6BD7DEA">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<schemaObject>19660489-048A-CEBD-7396-B7C36CC61C91</schemaObject>
+<segment>2C9A36B4-1879-5EA9-80F4-C8FD8E39E2A1</segment>
+<tableSpace>101B0D6D-AA77-5095-2ECC-17CAFFFAD281</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="DEPT_LOC_FK" id="13BFB228-F160-4D28-EAFB-0F9476EF3CA3">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="DEPT_MGR_FK" id="557E37E8-841A-4785-954F-0B74C41CFD3E">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DEPT_ID_PK" id="A0CC2D53-AAD2-0C64-4B75-79A67E4A4AE9">
+<createdBy>ih919</createdBy>
+<createdTime>2021-11-17 10:23:32 UTC</createdTime>
+<ownerDesignName>20211117ora</ownerDesignName>
+<segment>2C9A36B4-1879-5EA9-80F4-C8FD8E39E2A1</segment>
+<tableSpace>101B0D6D-AA77-5095-2ECC-17CAFFFAD281</tableSpace>
+<existingIndex>A2AE2837-5A3B-55CC-AD87-6807F6BD7DEA</existingIndex>
+<indexSegment>2C9A36B4-1879-5EA9-80F4-C8FD8E39E2A1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

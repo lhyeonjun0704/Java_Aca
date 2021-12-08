@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+//xhr선언
+var xhr1 = null;
+
+function getXHR() { 
+  try {          //표준형 
+          if (window.XMLHttpRequest) //XMLHttpRequest 사용가능해 ?
+                return new XMLHttpRequest;//xhr 객체   생성 
+          else if (window.ActiveXObject) //IE old버전?  
+                  return new ActiveXObject("MSXML2.XMLHTTP");
+          else 
+                  return new ActiveXObject("Microsoft.XMLHTTP");
+  }catch(e) {
+         xhr1=null; 
+  }
+}
+
+function serverKaja(){
+	xhr1 = getXHR(); // new XHR 객체 xhr1
+	xhr1.onreadystatechange = callback1; // callback1이름의 함수를 등록
+	
+	xhr1.open("get", "./kaja.jsp", true); // xhr1.open~
+	xhr1.send(null);
+}
+
+/* case 0:
+aa.value += "객체생성\n";
+break;
+case 1:
+aa.value += "open메서드호출\n";
+break;
+case 2:
+aa.value += "send메서드호출\n";
+break;
+case 3:
+  aa.value += "아직 다안옴\n";
+break; */
+
+function callback1(){
+	var ta = document.getElementById("ta");
+	switch(xhr1.readyState){
+	case 4:
+		ta.value += "서버에서 왔다\n";
+		if(xhr1.status == 200){
+			ta.value += "서버 정상";
+			ta.value += xhr1.responseText + "\n";
+		}
+		else{
+			ta.value += "에러";
+			ta.value += xhr1.status + "\t" + xhr1.statusText + "\n";
+		}
+		break;
+	}
+}
+
+function clearkaja(){
+	var ta = document.getElementById("ta");
+	ta.value = "";
+}
+
+</script>
+</head>
+<body>
+	<h3> AJax Kaja</h3>
+	<br />
+	<textarea rows="20" cols="100" id="ta"></textarea>
+	<br />
+	<input type="button" value="go to server" onclick="serverKaja()">
+	<input type="button" value="reset" onclick="clearkaja()">
+</body>
+</html>

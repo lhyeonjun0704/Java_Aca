@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="./jquery.min.js"></script>
+</head>
+<body>
+	<input type="text" id="irum" value="HI">
+	
+	<div id="div1"></div>
+	<div id="div2">
+		<ul>
+			<li id="li3">바보</li>
+			<li id="li4">온달</li>
+			<ul>
+				<li id="li5">멋지다</li>
+			</ul>
+		</ul>
+	</div>
+
+<script>
+
+$(function(){
+	var div1 = document.getElementById("div"); // dom 접근
+	div1.innerHTML = "<h2>러브라인</h2>"; // 동적변경 // div1 id내용변경
+	
+	/* dom으로 넣은 "러브라인" 글자를 jquery로 있는 것 나오게 해서 출력 */
+	
+	alert($("#div1").html()); // 태그까지 get 만일 text() 이면 글자만 get
+	
+	$("#div2 #li3").text("평강공주").css("color", "red");
+	
+	$("#div2 #li5").html("<h3>결혼 </h3>");
+	
+	$("*").css("color", "blue");
+	
+	alert($("#irum").val());
+	$("#irum").val("소개합니다...");
+	
+	
+});
+
+</script>	
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	document.onmousemove=function(){
+		document.getElementById("f1").style.left=event.clientX+"px" // event.clientX -> 마우스 x좌표
+		documenn.getElementById("f1").style.top=event.clientY+"px" // event.clientY -> 마우스 y좌표
+	} // var f1 = document.getElementById("f1");
+	// f1.style.top = event.clientY+"px"
+</script>
+</head>
+<body>
+	<span id="f1" style="position:absolute;"> </span>
+	<!-- <img src="fox.gif" borer="0" name="krim" />  -->
+	
+	<div class="menu1" id="bigmenu2" onclick="kaja(document.getElementById('somenu2'))" >
+		회사소개 및 연혁
+	</div>
+	<div class="menu2" id="somenu2" style="display:none">
+		<ul>
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">회사연혁</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
