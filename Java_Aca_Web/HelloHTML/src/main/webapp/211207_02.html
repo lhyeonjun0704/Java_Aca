@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="./jquery-3.3.1.js"></script>
+<script>
+	function kaja(){
+		window.location="http://www.naver.com"
+	}
+</script>
+</head>
+<body>
+  <div id="title1"> <h3>영화관으로</h3> </div>
+   <div id="stitle1"  style="display:none">
+      <ul>
+        <li><A href="#">영화제목은</A>
+        <li><A href="#">상영관안내</A>
+      </ul> 
+   </div>  
+  
+  <div id="title2"> <h3>식당으로</h3> </div>
+  <div id="stitle2"  style="display:none">
+    <ul>
+      <li><A href="#">음식메뉴는</A>
+      <li><A href="#">맛집안내</A>
+    </ul>
+  </div>  
+  
+  
+  
+<div id="title3"> <h3>후식</h3> </div>
+  <div id="stitle3"  style="display:none">
+    <ul>
+      <li><A href="#">커피메뉴는</A>
+      <li><A href="#">차메뉴는</A>
+    </ul>
+  </div>  
+  
+<div id="title4"> <h3>주차</h3> </div>
+  <div id="stitle4"  style="display:none">
+    <ul>
+      <li><A href="#">주차장약도는</A>
+      <li><A href="#">주차요금안내</A>
+    </ul>
+  </div>
+  
+  <script>
+  
+  	/* $(function(){
+  		var soo = [1,2,3,4];
+  		
+  		$.each(soo, function(index, value){
+  			$('#title' + value).click(function(){
+  				if($('#stitle' + value).is(':hidden'))
+  					$('#stitle' + value).show();
+  				else
+  					$('#stitle' + value).hide();
+  			});
+  		});
+  	}); */
+  	
+  	$(function(){
+  		$("img").attr("width", 100).att("height", 70);
+  		setInterval(function(){
+  			$("#child2").animate({width:"+=30"}, 1000).animate({heigth:"+=20"}, 500);
+  		}, 3000);
+  	});
+  	
+  </script>
+  
+    
+</body>
+<!-- <body onload="setTimeout('kaja()', 5000)">
+	<h1> 수상소감</h1>
+	<h2>동감</h2>
+	
+	
+	<script>
+	
+	$(function(){
+		$("img").css("width", 100);
+		$("img").css("height", 100);
+		
+		setInterval(function(){
+			$("img").first().appendTo("body");
+		}, 3000);
+	});
+	
+	
+	$(function(){
+		var urlArray1=[
+			{key: '네이버', value:'http://www.naver.com/'},
+			{key: '레드써니',value:'http://blog.naver.com/i2krs/'}
+		]
+	});
+	
+	 $.each(urlArray1,function(index,kab1){ //for 반복문 : for( var aa  in  객체들 )
+        var str1="";      //0,1,2,.....
+		str1 += '<a href="'+kab1.value+'">'
+      	+'<h1>'+kab1.key+'</h1></a>'+'<br>';//처음에는 naver 
+   		//<a href="http://www.naver.com">
+   		   	   //                       <h1>네이버</h1></a><br>
+    	      //여기까지 a tag 만들어짐 
+   		document.body.innerHTML +=str1; //body태그 공간  //< body>안에  a tag 줄이 들어감 
+                 
+    	});//$.each_function-end 
+	//$(function()-end
+		
+	</script>
+	
+	
+	<script>
+	
+	$(function(){
+		
+		$("<h2>동감!</h2>").append("body");
+		
+	})
+	
+	</script>
+	
+	
+</body> -->
+</html>
