@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="HR" directorySegmentName="seg_0" id="B11C9236-3A86-2763-3CEB-948445D3133F">
+<sourceConnName>hr</sourceConnName>
+<sourceObjName>HR</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:53 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<schemaObject>58090106-7D0D-551B-F884-4A723A8632E9</schemaObject>
+<defTableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</defTableSpace>
+<privileges>UNLIMITED TABLESPACE, ALTER SESSION, CREATE SESSION, CREATE SYNONYM, CREATE DATABASE LINK, CREATE SEQUENCE, CREATE VIEW</privileges>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="24A29F0A-061C-56AF-9286-497A23E35DBD">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:53 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem2" id="FA941ABD-1011-B35F-5DFE-FB10E5F928D7">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:02:58 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem3" id="5929F42E-D308-1307-D27A-5EBB1018769E">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:03 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem4" id="11FA8F54-AEFE-B061-3EC8-83F87B226CF8">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:10 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem5" id="5FCC6657-4D35-41D0-AB03-4E9942CE2B5D">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:14 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem6" id="E07DCECE-F990-99BB-E82E-45BBDD1DC097">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem7" id="BB62C13D-24E6-13A8-3730-3268FEB75862">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:42 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem8" id="1346608B-1615-2EC0-FF39-081D8C3B76EA">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:51 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem9" id="5888411D-D795-795E-44BF-7FCB730E63E7">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:59 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem10" id="79FFE920-FD7A-3C35-DD9D-5A417DC22A36">
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:04:05 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<tableSpace>B4987A3D-FD73-98A3-1E54-2D938F45E22D</tableSpace>
+</QuotaItem>
+</quotaItems>
+</UserOraclev10g>

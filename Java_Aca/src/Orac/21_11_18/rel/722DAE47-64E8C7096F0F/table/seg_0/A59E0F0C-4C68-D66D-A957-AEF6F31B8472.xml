@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A59E0F0C-4C68-D66D-A957-AEF6F31B8472" schemaObject="58090106-7D0D-551B-F884-4A723A8632E9" name="JOBS">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOBS</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[jobs table with job titles and salary ranges. Contains 19 rows.
+References with employees and job_history table.]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="JOB_ID" id="0F4FC376-37EB-2B93-3B6B-F28DF0F9E2E4">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key of jobs table.]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JOB_TITLE" id="0421F68F-6375-76B3-9D3B-2600DCF49105">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>JOB_TITLE</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column that shows job title, e.g. AD_VP, FI_ACCOUNTANT]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35 BYTE</dataTypeSize>
+<ownDataTypeParameters>35 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JOB_TITLE_NN</notNullConstraintName>
+</Column>
+<Column name="MIN_SALARY" id="8978DAAD-FC05-5AD9-AD64-309086289046">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>MIN_SALARY</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Minimum salary for a job title.]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAX_SALARY" id="38CD59BB-EC3A-F3ED-3AED-7C9C2A277E00">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>MAX_SALARY</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Maximum salary for a job title]]></commentInRDBMS>
+<ownerDesignName>21_11_18</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F217A22A-0FAB-1507-ACEB-8B947B5414A8" name="JOB_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOB_ID_PK</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F4FC376-37EB-2B93-3B6B-F28DF0F9E2E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="084DDB79-DD86-DFE4-833F-47227D5F8EAB" schemaObject="58090106-7D0D-551B-F884-4A723A8632E9" name="JOB_ID_PK">
+<sourceConnName>hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOB_ID_PK</sourceObjName>
+<createdBy>82106</createdBy>
+<createdTime>2021-11-18 07:03:35 UTC</createdTime>
+<ownerDesignName>21_11_18</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F4FC376-37EB-2B93-3B6B-F28DF0F9E2E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
